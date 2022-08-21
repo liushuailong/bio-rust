@@ -82,6 +82,7 @@ impl Fastq {
         let fastq_reader = BufReader::new(fastq_content);
         let mut line_iter = fastq_reader.lines().map(|l| l.unwrap());
         let mut fastq = Fastq::new(Vec::new());
+        // todo 如何兼容使用cat合并的fastq.gz格式的文件，文件中有多个EOF结束标志
         loop {
             let read_id: String;
             let sequence: String;
