@@ -9,6 +9,10 @@ authors = ["Slliu <liushuailong@liushuailong.cn>", "loong <liushuailong001@163.c
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-clap = "0.11.0"
+clap = { version = "3.2.17", features = ["derive"] }
 flate2 = "0.2.20"
 csv = "0.15.0"
+
+[[example]]
+name = "sort_vcf"
+path = "examples/sort_vcf.rs"
